@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Add new book";
+}
+@model BookModel
+
+<div class="container">
+    <h1>Form add new book</h1>
+
+   @*  --implementare allert di successo con annessi if + aggiungi danger allert (fallimento)
+    <div class="alert alert-success d-flex align-items-center alert-dismissible fade show" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <p>L'aggiunta del tuo libro è andata a buon fine</p>
+    </div> *@
+
+    <form asp-controller="Book" asp-action="AddNewBook" method="post" class="row g-3 justify-content-md-center">
+        <div class="col-md-6">
+            <label asp-for="Title" class="form-label">Titolo</label>
+            <input asp-for="Title" type="text" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Author" class="form-label">Autore</label>
+            <input asp-for="Author" type="text" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <label asp-for="Category" class="form-label">Categoria</label>
+            <input asp-for="Category" type="text" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <label asp-for="Language" class="form-label">Lingua</label>
+            <input asp-for="Language" type="text" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <label asp-for="TotalPages" class="form-label">Numero di pagine</label>
+            <input asp-for="TotalPages" type="number" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label">Descrizione</label>
+            <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" id="liveAlertBtn">Add</button>
+        </div>
+    </form>
+ </div>

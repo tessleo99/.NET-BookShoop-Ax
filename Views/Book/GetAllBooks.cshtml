@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Get All Books";
+   
+}
+
+@model IEnumerable<BookModel>
+
+<div class="text-center">
+    <h1 class="display-4">Book List</h1>
+</div>
+<div class="text-center">
+</div>
+<div class="text-center m-3">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+            @foreach (var book in Model)
+            {<div class="col">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@book.Title</h5>
+                            <p class="card-text">@book.Description</p>
+                            <p class="text-secondary">- @book.Author</p>
+                            <a href="/book/getbookid/@book.Id" class="btn btn-primary">Dettagli</a>
+                        </div>
+                 </div>
+             </div>
+            }
+
+        </div>
+    </div>
+</div>

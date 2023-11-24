@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "Get Book by Id";
+}
+
+@model BookModel
+
+
+<div class="text-center">
+    <h1> DETTAGLI</h1>
+</div>
+
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <div class="card mb-3">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Title</h5>
+                    <p class="card-text">@Model.Title</p>
+                    <p class="text-secondary">- @Model.Title</p>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
